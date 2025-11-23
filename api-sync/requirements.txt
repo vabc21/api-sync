@@ -1,0 +1,7 @@
+fastapi[standard]
+uvicorn[standard]
+python-dotenv
+pyodbc
+requests
+pydantic
+python-dateutil
