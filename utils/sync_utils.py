@@ -30,10 +30,10 @@ class SyncUtils:
                 return None
             
             data = response.json()
-            
-            if not data.get("éxito"):
-                logger.warning(f"⚠️  Error: {data.get('mensaje')}")
-                return None
+
+            if not data:
+                logger.warning(f"⚠️ API retornó 0 registros")
+                return []
             
             registros = data.get("datos", [])
             logger.info(f"✓ Recibidos {len(registros)} registros")
